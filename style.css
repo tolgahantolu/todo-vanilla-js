@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e2e2e2;
+  color: #1c1d1c;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  flex-direction: column;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+/*  add todo form styles */
+.todo__input,
+.todo__button {
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.todo__button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo__button:hover {
+  color: #fff;
+  background-color: #1c1d1c;
+}
+
+/*  list of todo  */
+.todolist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist {
+  list-style: none;
+  min-width: 30%;
+}
+
+/* from js */
+.todolist__todo {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  background-color: #fff;
+  color: #1c1d1c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.5s ease;
+}
+
+.todolist__todoitem {
+  flex: 1;
+  padding-left: 0.5rem;
+}
+
+.todolist__completebtn,
+.todolist__deletebtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #1c1d1c;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todolist__completebtn:hover,
+.todolist__deletebtn:hover {
+  background-color: #1c1d1c;
+  color: #fff;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+/* from js */
+
+/* filter todo items */
+.todo__filter {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+
+  width: 10rem;
+  padding: 1rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #1c1d1c;
+  transition: all 0.3s ease;
+}
+
+.todo__select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.todo__select::after {
+  /*content: "\e4e7";*/
+  content: "↓";
+  position: absolute;
+  top: -0.5rem;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  background-color: #1c1d1c;
+  color: #fff;
+
+  transition: all 0.3s ease;
+}
+
+.todo__select:hover::after,
+.todo__filter:hover {
+  color: #1c1d1c;
+  background-color: #fff;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- meta -->
+	<title> Todo Project | Vanilla JS </title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- style css -->
+	<link rel="stylesheet" href="./style.css" type="text/css">
+
+	<!-- fontawesome 6.2.0 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- script js -->
+	<script defer src="./app.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Tolgahan's Todo List 🚀</h1>
+		<p>List of things I plan to do soon. 📝</p>
+	</header>
+
+	<!-- add todo form -->
+	<form class="todo">
+		<input type="text" class="todo__input">
+		<button type="submit" class="todo__button">
+			<i class="fa-solid fa-plus"></i>
+		</button>
+
+		<!-- filter - todo items -->
+		<div class="todo__select">
+			<select name="todos" class="todo__filter">
+				<option value="all">All</option>
+				<option value="completed">Completed</option>
+				<option value="uncompleted">Uncompleted</option>
+			</select>
+		</div>
+
+	</form>
+	<!-- end of add todo form -->
+
+	<!-- list of todo -->
+	<div class="todolist-container">
+		<ul class="todolist">
+
+		</ul>
+	</div>
+	<!-- end of list of todo -->
+</body>
+
+</html>
